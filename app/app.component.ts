@@ -16,7 +16,7 @@ import { Task } from './task.model';
 <div class="col-xs-4" >
 <edit-task
 [selectedChildTask]="selectedTask"
-(doneClickedSender)="edited"
+(doneClickedSender)="edited()"
   ></edit-task>
 </div>
 <div class="col-xs-4" >
@@ -33,12 +33,12 @@ import { Task } from './task.model';
 
 export class AppComponent{
 public masterTaskList: Task[] = [
-  new Task(1, "The First"),
-  new Task(2,"The First"),
-  new Task(3, "The First"),
-  new Task(4, "The First"),
-  new Task(5, "The First"),
-  new Task(6,"The First")
+  new Task(1, "The First", true),
+  new Task(2,"The First", false),
+  new Task(3, "The First", false)),
+  new Task(4, "The First", false)),
+  new Task(5, "The First",true),
+  new Task(6,"The First",true)
 ];
 selectedTask: Task = null;
   showDetails(clickedTask: Task) {
@@ -48,6 +48,6 @@ selectedTask: Task = null;
     this.selectedTask = null;
   }
 newTask(newTaskFromChild: Task){
-  this.masterTaskList.push(newTaskFromChild)
+  this.masterTaskList.push(newTaskFromChild);
 }
 }

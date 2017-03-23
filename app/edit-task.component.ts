@@ -10,17 +10,10 @@ import { Task } from './task.model';
         <label> Task ID:</label>
         <input [(ngModel)]="selectedChildTask.id">
       </div>
-      <div>
-        <label>Name:</label>
-        <input [(ngModel)]="selectedChildTask.name">
-      </div>
+
       <div>
         <label>Description:</label>
         <input [(ngModel)]="selectedChildTask.description">
-      </div>
-      <div>
-        <label>Price:</label>
-        <input [(ngModel)]="selectedChildTask.price">
         <button (click)="doneClicked()">Done</button>
       </div>
     </div>

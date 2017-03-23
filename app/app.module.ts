@@ -6,6 +6,7 @@ import { TaskListComponent } from './task-list.component';
 import { EditTaskComponent } from './edit-task.component';
 import { NewTaskComponent } from './new-task.component';
 import { CompletenessPipe } from './completeness.pipe';
+import { TaskComponent } from './task.component';
 import {
   Component,
   Input,
@@ -27,6 +28,7 @@ import {
     EditTaskComponent,
     NewTaskComponent,
     CompletenessPipe,
+    TaskComponent,
     ],
   bootstrap: [AppComponent],
 

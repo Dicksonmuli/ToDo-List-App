@@ -8,17 +8,11 @@ import { Task } from './task.model';
     <h4>Add Stock</h4>
     <label>New Task Id</label>
     <input #newId>
-    <label>New Name</label>
-    <input #newName>
     <label>New Description</label>
-    <input #newDescription>
-    <label>New Price</label>
-    <input #newPrice>
-    <button (click)="addClicked(newId.value, newName.value, newDescription.value, newPrice.value);
+    <input #newDescription><br>
+    <button (click)="addClicked(newId.value, newDescription.value);
                       newId.value='';
-                      newName.value='';
                       newDescription.value='';
-                      newPrice.value='';
                       ">Add</button>
     </div>
   `
@@ -26,7 +20,7 @@ import { Task } from './task.model';
 
 export class NewTaskComponent{
   @Output() newTaskSender = new EventEmitter();
-  addClicked(id: number, name: string, description: string, price: number){
+  addClicked(id: number, description: string){
     var newTaskToAdd: Task = new Task(id, description);
     this.newTaskSender.emit(newTaskToAdd);
   }

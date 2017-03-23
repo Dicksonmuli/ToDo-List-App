@@ -16,7 +16,7 @@ export class CompletenessPipe implements PipeTransform {
         }
       }
       return output;
-    }else if(desiredCompleteness === "done" ){
+    }else if(desiredCompleteness === "isDone" ){
         for(var i = 0; i< input.length; i++){
           if(input[i].done === true){
               output.push(input[i]);

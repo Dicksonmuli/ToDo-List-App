@@ -4,10 +4,10 @@ import { Task } from './task.model';
 @Component({
   selector: 'task-display',
   template: `
-  <div>
+  <div>  <label>{{ task.description }}</label>
     <input *ngIf="task.done === true" type="checkbox" checked (click)="toggleDone(false)"/>
     <input *ngIf="task.done === false" type="checkbox" (click)="toggleDone(true)"/>
-    <label>{{ task.description }}</label>
+
   </div>
   `
 })

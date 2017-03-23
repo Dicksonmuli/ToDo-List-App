@@ -33,12 +33,12 @@ import { Task } from './task.model';
 
 export class AppComponent{
 public masterTaskList: Task[] = [
-  new Task(1, "The First", true),
-  new Task(2,"The First", false),
-  new Task(3, "The First", false)),
-  new Task(4, "The First", false)),
-  new Task(5, "The First",true),
-  new Task(6,"The First",true)
+  new Task(1, "The sec", true),
+  new Task(2,"The Third", false),
+  new Task(3, "The Fouth", false),
+  new Task(4, "The Fifth", false),
+  new Task(5, "The six",true),
+  new Task(6,"The Seventh",true)
 ];
 selectedTask: Task = null;
   showDetails(clickedTask: Task) {

@@ -7,11 +7,11 @@ import { Task } from './task.model';
   template: `
     <div>
     <h2>My Task List</h2>
-      <div class="task-done" (change)="onChange($event.target.value)">
-      <button value="isDone">Tasks Done</button>
-      <button value="notDone">Tasks NotDone</button>
-      <button value="all">All Tasks</button>
-      </div>
+      <select class="task-done" (change)="onChange($event.target.value)">
+      <option value="isDone">Tasks Done</option>
+      <option value="notDone">Tasks NotDone</option>
+      <option value="all">All Tasks</option>
+      </select>
       <div *ngFor="let currentTask of childTaskList | completeness: selectedCompleteness ">
 
         <!-- each Tasks here -->

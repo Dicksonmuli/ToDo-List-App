@@ -1,6 +1,6 @@
 
 export class Task{
-  public done: boolean = false;
-  constructor( public id: number,  public description: string ){};
+  
+  constructor( public id: number,  public description: string, public done: boolean){};
 
 }

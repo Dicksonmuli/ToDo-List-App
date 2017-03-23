@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Task } from './task.module';
+import { Task } from './task.model';
 
 @Component({
   selector: 'my-app',
@@ -32,22 +32,22 @@ import { Task } from './task.module';
 })
 
 export class AppComponent{
-public masterTaskList: Bar[] = [
-  new Bar(1,"Narco", "The First", 10, false),
-  new Bar(2,"Bombasto", "The First", 20, true),
-  new Bar(3,"Celeritas", "The First", 30, true),
-  new Bar(4,"Magneta", "The First", 40, true),
-  new Bar(5,"Magma", "The First", 50, true),
-  new Bar(6,"Tornado", "The First", 60, false),
+public masterTaskList: Task[] = [
+  new Task(1, "The First"),
+  new Task(2,"The First"),
+  new Task(3, "The First"),
+  new Task(4, "The First"),
+  new Task(5, "The First"),
+  new Task(6,"The First")
 ];
-selectedTask: Bar = null;
-  showDetails(clickedTask: Bar) {
+selectedTask: Task = null;
+  showDetails(clickedTask: Task) {
     this.selectedTask = clickedTask;
   }
   edited() {
     this.selectedTask = null;
   }
-newTask(newTaskFromChild: Bar){
+newTask(newTaskFromChild: Task){
   this.masterTaskList.push(newTaskFromChild)
 }
 }

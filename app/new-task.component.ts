@@ -1,5 +1,5 @@
 import { Component, Output, EventEmitter} from '@angular/core';
-import { Bar } from './bar.module';
+import { Task } from './task.model';
 
 @Component({
   selector: 'new-task',
@@ -27,7 +27,7 @@ import { Bar } from './bar.module';
 export class NewTaskComponent{
   @Output() newTaskSender = new EventEmitter();
   addClicked(id: number, name: string, description: string, price: number){
-    var newTaskToAdd: Bar = new Bar(id, name, description, price);
+    var newTaskToAdd: Task = new Task(id, description);
     this.newTaskSender.emit(newTaskToAdd);
   }
 }

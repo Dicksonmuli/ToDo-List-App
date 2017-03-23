@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { Bar } from './bar.module';
+import { Task } from './task.model';
 
 @Component({
   selector: 'edit-task',
@@ -28,7 +28,7 @@ import { Bar } from './bar.module';
 })
 
 export class EditTaskComponent {
-  @Input() selectedChildTask: Bar;
+  @Input() selectedChildTask: Task;
   @Output() doneClickedSender = new EventEmitter();
   doneClicked(){
     this.doneClickedSender.emit();

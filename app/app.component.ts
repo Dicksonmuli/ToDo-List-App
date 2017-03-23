@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Bar } from './bar.module';
+import { Task } from './task.module';
 
 @Component({
   selector: 'my-app',
@@ -40,7 +40,6 @@ public masterTaskList: Bar[] = [
   new Bar(5,"Magma", "The First", 50, true),
   new Bar(6,"Tornado", "The First", 60, false),
 ];
-done.Task[1] = true;
 selectedTask: Bar = null;
   showDetails(clickedTask: Bar) {
     this.selectedTask = clickedTask;

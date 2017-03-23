@@ -6,13 +6,25 @@ import { Task } from './task.model';
   pure: false
 })
 export class CompletenessPipe implements PipeTransform {
-  transform(input: Task[]){
+  transform(input: Task[], desiredCompleteness){
     var output: Task[] = [];
-    for (var i = 0; i < input.length; i++) {
-      if (input[i].done === false) {
-        output.push(input[i]);
+//a function to filter tasks
+    if(desiredCompleteness === "notDone" ){
+      for(var i = 0; i< input.length; i++){
+        if(input[i].done === false){
+            output.push(input[i]);
+        }
       }
+      return output;
+    }else if(desiredCompleteness === "done" ){
+        for(var i = 0; i< input.length; i++){
+          if(input[i].done === true){
+              output.push(input[i]);
+          }
+        }
+        return output;
+    }else{
+        return input;
     }
-    return output;
   }
 }
